@@ -1,0 +1,16 @@
+./pipex infile "cat" "grep texto" out1
+< infile cat | grep texto > out2
+
+./pipex infile "ls -l"  "wc -l" out1 
+< infile ls -l | wc -l > out2
+
+./pipex infile "grep a1" "wc -w" out1
+< infile grep a1 | wc -w > out2
+
+./pipex infile "wc -x" "wc" out1
+< infile wc -x | wc > out2
+
+./pipex infile "" "ls" out1
+< infile  | ls > out2
+
+
